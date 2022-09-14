@@ -102,5 +102,49 @@
       "type": "ntlm"
     },
     "tests": []
+  },
+  {
+    "_id": "d18d7b0f-bc15-4831-9d4d-a47227ea1ef3",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/products",
+    "url": "http://localhost:3000/products",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-09-14T21:01:36.401Z",
+    "modified": "2022-09-14T21:36:51.556Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"ProdutoX\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "ntlm"
+    },
+    "tests": []
+  },
+  {
+    "_id": "ab8eb2cd-e906-4f3a-963c-2922c50290ce",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/products/new",
+    "url": "http://localhost:3000/products/new",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-09-14T21:22:46.251Z",
+    "modified": "2022-09-14T21:22:46.306Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"ProdutoX\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "ntlm"
+    },
+    "tests": []
   }
 ]

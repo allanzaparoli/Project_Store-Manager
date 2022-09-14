@@ -11,7 +11,18 @@ const getProductsById = async (id) => {
   return idProducts;
 };
 
+const createProduct = async (name) => {
+  const newProduct = await productsModel.createProduct(name);
+  const { insertId } = newProduct;
+  const result = {
+    id: insertId,
+    name,
+  };
+  return result;
+};
+
 module.exports = {
   allProducts,
   getProductsById,
+  createProduct,
 };
