@@ -12,4 +12,7 @@ router.get('/:id', productsController.getProductsById);
 // requisito 2
 router.post('/', validateName, productsController.createProduct);
 
+// requisito 10
+router.put('/:id', validateName, productsController.updateProduct);
+
 module.exports = router;
