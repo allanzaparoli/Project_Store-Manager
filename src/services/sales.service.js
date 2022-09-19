@@ -21,6 +21,26 @@ const createSales = async (salesArray) => {
   return { id: insertId, itemsSold: salesArray };
 };
 
+const listAllSales = async () => {
+  const list = await salesModel.listAllSales();
+  return list;
+};
+
+const getSalesById = async (id) => {
+  const listById = await salesModel.getSalesById(id);
+  if (listById.length === 0) {
+    return { error: true, status: 404, message: 'Sale not found' };
+  }
+
+  const notSalesId = listById.reduce((acc, element) => {
+    acc.push({ date: element.date, productId: element.productId, quantity: element.quantity });
+    return acc;
+  }, []);
+  return notSalesId;
+};
+
 module.exports = {
   createSales,
+  listAllSales,
+  getSalesById,
 };
