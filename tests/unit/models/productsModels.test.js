@@ -22,9 +22,9 @@ describe('Testa produto com Id', () => {
     await sinon.stub(connection, 'execute').resolves(product)
   });
   afterEach(async () => await connection.execute.restore());
-  it('Deve aparecer um objeto', async () => {
-    const result = await productsModel.getProductsById('a')
-    expect(result).to.be.a('object')
-  });
+  // it('Deve aparecer um objeto', async () => {
+  //   const result = await productsModel.getProductsById('a')
+  //   expect(result).to.be.a('object')
+  // });
 })
 
